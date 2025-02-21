@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio - Tamilselvan</title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <!-- Custom Styles -->
+    <link href="style.css" rel="stylesheet">
+
+    <!--Resume Link-->
+    <link rel="stylesheet" href="C:\Users\TAMILARASAN\Downloads">
+</head>
+
+<body class="bg-blue-100 font-sans leading-normal tracking-normal">
+    <!-- Header Section -->
+    <header class="bg-indigo-600 fixed top-0 left-0 w-full z-50 shadow-md">
+        <div class="container mx-auto">
+            <div class="flex items-center justify-between p-4">
+                <!-- Logo and Brand Name with Title -->
+                <div class="flex items-center gap-4">
+                    <!-- Image -->
+                    <img class="nav-link text-[20px] inline-flex items-center gap-1 h-12" data-aos="fade-up-right"
+                        data-aos-duration="1500" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfNJREFUSEvFlTFLXFEQhb8FC4sUlhEEY22TIoVgRP0JKSRJpcGQVqwkhZhUwSq9JCTWaU2toiCBlBYWgoYIEWwtUlj4vmXucvfl7WOXdePAsnvfuzNnzsyZ2QYDtsaA41MH8AjYAH4Be/HJ85kDFuP9V+C8Ktk6gC/AfjgKZID38b0bwTybyGwB9KoXAJ0MMpE5vQMmgTHgbYnRWZHMfBWLTgwEkIFOuf0BLoFnpWAmI4N/ylRXIp1yAM+WLJmMkpXvtl7UAfwG1qO+U8AIcBKeMtS2I+sPwGi3PTAz1fEA+A4cAyvATCnAEbBagL4ApoHrAMyZtcnUrGyWyvCSMkzqsTRKcS1ANuOOx/GMyVIk12p4XiKD2yg1n+wb8CTU9AlYjhefgdeRkInlcdoEUgbIZWmsg1DNQvx+GgCHUTJZOQNlP5NtPssBLIt084HxoiZlmWzF+Q3wM2ZFxmkAU/aWtNmLsop8aEZJjjbOZmttzYuzwQ36HPgR9VdZrbtVMtXBBiu9G+AUUKY7oRTBHgKPgb/AUNyThSVrs7o5aNUxpKiCVI/2EXiZCSK/2xVA1apIEhyu2EU9r4pOu+iqkOfFXe2ifEOmobPOmgOYL7eeS5RUo2wNrlpURxrCxNDt6fvKBlfJtCyCvs/3+p/cd/b/pUS3Wxl0GZnEeQYAAAAASUVORK5CYII=" alt="Logo" />
+                    <!-- Logo/Brand Name with title -->
+                    <a href="#" class="text-black text-2xl font-bold" data-aos="fade-down" data-aos-duration="2000">
+                        Tamilselvan
+                        <div class="text-base text-white" data-aos="fade-up" data-aos-easing="linear"
+                            data-aos-duration="1500">React Developer</div>
+                    </a>
+                </div>
+    
+                <!-- Navigation -->
+                <nav>
+                    <ul class="flex space-x-9 items-center ml-auto hidden md:flex">
+                        <!-- ml-auto pushes nav to the right -->
+                        <li><a href="#about" class="nav-link text-[20px] inline-flex items-center gap-1" data-aos="fade-down" data-aos-duration="2000"><img
+                                    class="nav-img" 
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAPBJREFUSEvVldkRwjAMRDedQCfQCVQCVAKdQCmhEvAytkfjRLHkOB/kL4ffk9ZHBmx8DRvz0VNwB/AOBV9l0aXgAIAf7iqdHQG8xDccc4r3NykpBc8wkJKlq4SzGI6TRWVJKfhEsjU6QscIl5JzePYga42AsbBbdiQlrP4HXyOQmROeJJNoWzqQ8ASkZD83cV7BHJzcnHkp8QiscM5LXsJWgQfO1ZS5FoEVznQmy9wiSINkvFrmXQTqhPboYAneHJHnRG+K6L8EluO61hE3Gc+m2cOOu/Bi+CdoEp5JXAjqTq5V535v/bG4wVpEzSBt4BeV+kAZ5MHlwgAAAABJRU5ErkJggg==" />
+                            <b>About</b></a></li>
+                        <li><a href="#skills" class="nav-link text-[20px] inline-flex items-center gap-1" data-aos="fade-down" data-aos-duration="2000"><img
+                                    class="nav-img"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAATRJREFUSEu1lYsNwjAMRI9JgE1gE5gEmAQ2gU2ASYCHSOS6zqcStVSpUh2ffXdOF5o5FjPXVy/AVdLGNXORtG812AvwKhRqni8lrCQ9fkV5vxcA1iaPFHvueyQCSHRAwVPSoUEDeRSGwhFtHmAn6dzitfEdXQAKJyhxPQUTareJOjvBsUIHh04fGm5GFyaFmijIpd5Ag8iK5FAcMaNA/Agka+E1oCvEsocGnDqUaOqB0JGLfFc1r3sLj6btAfBet0NMBoAirGqjRlFkawSGpu+i2gmi4knkbDuDXNvwUOSWTZmErnjonA2fZFOaK9lu6qJlW3uRa1P0guQl8xqkAmmKdJ/4vfBAFFz+aGPT0StHz3UNAFsehbXw6KouTRAV+vsPx4NE4o/oiDpr/vJ6lS3lzQ7wBuXbRBlPVqS5AAAAAElFTkSuQmCC" />
+                            <b>Skills</b></a></li>
+                        <li><a href="#projects" class="nav-link text-[20px] inline-flex items-center gap-1" data-aos="fade-down" data-aos-duration="2000"><img
+                                    class="nav-img"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAIhJREFUSEtjZKAxYKSx+Qx0t8CBgYGhnoGBAUSTAw4wMDA0AvWDaDBA98F9BgYGBXJMRtIDMtwRlwX/cVhMrJ0Y+tF9MGrBaBARTEyjQTQEgogaZdEDBgYGRVxlEagU3U8wIPArABV0WEtTWBKj0Hy4dnA5h1zY0dwCarkcxRy6V5lU9wXNfQAAnY8hGYBzYI8AAAAASUVORK5CYII=" />
+                            <b>Projects</b></a></li>
+                        <li><a href="#contact" class="nav-link text-[20px] inline-flex items-center gap-1" data-aos="fade-down" data-aos-duration="2000"><img
+                                    class="nav-img"
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOxJREFUSEvNldENwjAQQ91N6CawCZtQJgEmgU3KJlBXOYjopYkJkTipX+3dS2wn7dC4usbz4QG2AE4ANhXwO4Ce/R7gCoCQ2ppne4BH7eTQ/xXgODUPQb49gMPKYmSADY9nEkK/vFoActLQNJoXF4MwtgRwdmphP5GIfqR8kAGU5zIZfA6SyCbnPFDTK5tsAO6ET+4wShJxIGNq8hBmVwlj6sGKAV7+P+XyzC6S6AZgVyg+d0LjrYoA3uFK8SgTL8okwF7EaVL/F4vev7tNC+2YP0umqPkPh2bxfskdpLXdvNKnmqhI9NZJ7hIaninGLxk1KRkbAAAAAElFTkSuQmCC" />
+                            <b>Contact</b></a></li>
+                    </ul>
+                    <!-- Mobile Menu Button -->
+                    <button class="text-white md:hidden" id="menu-toggle">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </nav>
+            </div>
+        </div>
+    </header>
+    
+    <!-- Mobile Menu -->
+    <div class="md:hidden hidden bg-blue-400 w-20 fixed top-1 right-0 shadow-lg" id="mobile-menu">
+        <nav>
+            <ul class="space-y-4 p-4 mt-20">
+                <li><a href="#about" class="nav-link text-black"><b>About</b></a></li>
+                <li><a href="#skills" class="nav-link text-black"><b>Skills</b></a></li>
+                <li><a href="#projects" class="nav-link text-black"><b>Projects</b></a></li>
+                <li><a href="#contact" class="nav-link text-black"><b>Contact</b></a></li>
+            </ul>
+        </nav>
+    </div>
+    
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-white text-center">
+        <div class="container mx-auto px-6">
+            <!-- Button to toggle the details -->
+            <button id="toggleDetailsBtn" class="mt-10 px-2" data-aos="fade-up-right" data-aos-duration="2000">
+                <span class="about font-bold">About : </span><b>✔ClickHere</b>
+            </button>
+    
+            <!-- Portfolio Details Section (Initially hidden) -->
+            <div id="portfolioDetails" class="portfolio-details mt-10 space-y-8" style="display: none;">
+                
+                <div class="bg-blue-100 p-4">
+                <p class="text-lg text-justify">
+                    I am Tamil Selvan, a passionate <strong>React Developer</strong> with a strong foundation in front-end web development. With a strong desire to learn and adapt, I focus on creating responsive, user-friendly web applications that enhance user experience.
+                </p>
+    
+                <div class="text-left text-justify">
+                    <h3 class="text-xl font-semibold underline underline-offset-8">Contact Information</h3>
+                    <ul class="list-disc pl-6 mt-4">
+                        <li><strong>GitHub:</strong> <a href="https://github.com/tamiltamil14182/REACT-WEB-PROJECT.git" target="_blank" class="text-indigo-600 hover:underline">Tamil Selvan GitHub</a></li>
+                        <li><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/tamil-tamil-271297292" target="_blank" class="text-indigo-600 hover:underline">Tamil Selvan LinkedIn</a></li>
+                        <li><strong>Email:</strong> tamiltamil14182@gmail.com</li>
+                        <li><strong>Phone:</strong> +91 9500363260</li>
+                    </ul>
+                </div>
+    
+                <div class="text-left text-justify">
+                    <h3 class="text-xl font-semibold mt-8 underline underline-offset-8">Objective</h3>
+                    <p class=" mt-4">
+                        I am seeking a challenging role that offers opportunities for <strong>professional growth</strong> and <strong>continuous learning</strong> in the technology sector. I aim to leverage my technical skills, creativity, and eagerness to learn to contribute meaningfully to the development and success of my team and the organization.
+                    </p>
+                </div>
+    
+                <div class="text-left text-justify">
+                    <h3 class="text-xl font-semibold mt-8 underline underline-offset-8">Education</h3>
+                    <ul class="list-disc pl-6 mt-4">
+                        <li><strong>Bachelor of Commerce (B.Com) in Computer Application</strong> from K.S. Rangasamy College of Arts and Science (2021-2024) - 64%</li>
+                        <li><strong>Higher Secondary Certificate (HSC)</strong> from Shri Ganga Higher Secondary School (2020-2021) - 73%</li>
+                    </ul>
+                </div>
+    
+                <div class="text-left text-justify">
+                    <h3 class="text-xl font-semibold mt-8 underline underline-offset-8">Skills</h3>
+                    <ul class="list-disc pl-6 mt-4">
+                        <li><strong>Front-End Development:</strong> HTML, CSS, JavaScript, Bootstrap, Tailwind CSS</li>
+                        <li><strong>Framework:</strong> React.js</li>
+                        <li><strong>Soft Skills:</strong> Quick learning, Adaptability, Teamwork, Time management</li>
+                    </ul>
+                </div>
+    
+                <div class="text-left text-justify">
+                    <h3 class="text-xl font-semibold mt-8 underline underline-offset-8">Projects</h3>
+                    <ul class="list-disc pl-6 mt-4">
+                        <li><strong>Portfolio Website:</strong>A personal portfolio website built to showcase my skills projects,and achievements. It uses <b>HTML, Tailwind CSS, and JavaScript</b> to create a responsive layout.</li>
+                        <li><strong>Weather App:</strong> A React-based weather application that fetches data from an<b>External API to display real-time weather</b> information for any city. It includes search functionality and error handling.</li>
+                        <li><strong>E-Commerce Website:</strong> The e-commerce website built in React provides a dynamic and user-friendly platform for<b> responsive website, increase and decrease the price and adding items to the cart</b>. It features smooth navigation and a responsive design for seamless shoppin experience.</li>
+                    </ul>
+                </div>
+    
+                <div class="text-left text-justify">
+                    <h3 class="text-xl font-semibold mt-8 underline underline-offset-8">Internship</h3>
+                    <p class=" mt-4">
+                        Completed an internship as a Developer and Technology Job Simulation Intern at Accenture, gaining practical experience in developing technologies and applying theoretical knowledge to real-world projects.
+                    </p>
+                </div>
+    
+                <div class="text-left text-justify">
+                    <h3 class="text-xl font-semibold mt-8 underline underline-offset-8">Achievements</h3>
+                    <ul class="list-disc pl-6 mt-4">
+                        <li>Participated in the National Conference on "DIGI MARKETING & DIGI PAYMENTS TRANSFORMATION IN BUSINESS" at Nandha Arts and Science College.</li>
+                        <li>Attended the National Seminar on "Upskilling and Reskilling Opportunities Through NEP 2021" at P.S.G. College of Arts and Science.</li>
+                        <li>Presented a paper at AVANZARE V17.0 – National Symposium at Kongu Engineering College.</li>
+                        <li>Participated in the TEXPLOSION 5 Workshop at Alagappa College.</li>
+                    </ul>
+                </div>
+    
+                <div class="text-left text-justify">
+                    <h3 class="text-xl font-semibold mt-8 underline underline-offset-8">Area of Interest</h3>
+                    <p class=" mt-4">Web Development & Web Designing</p>
+                </div>
+    
+                <div class="text-left text-justify">
+                    <h3 class="text-xl font-semibold mt-8 underline underline-offset-8">Certification</h3>
+                    <ul class="list-disc pl-6 mt-4">
+                        <li>Completed MERN Stack Training (6 Months) at JSPIDERS Training Institute, Bangalore.</li>
+                    </ul>
+                </div>
+    
+                <div class="text-left text-justify">
+                    <h3 class="text-xl font-semibold mt-8 underline underline-offset-8">Declaration</h3>
+                    <p class=" mt-4">
+                        I hereby declare that the above-written details are true and correct to the best of my knowledge and belief.
+                    </p>
+                </div>
+            </div>
+        </div>
+        </div>
+    </section>
+    
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section py-20 bg-white text-black">
+        <div class="container mx-auto px-4 text-center">
+            <button id="skillBtn" class="mt-10 px-2" data-aos="fade-up-left" data-aos-duration="2000"><span
+                    class="about font-bold">Skills : </span><b>✔Click
+                    Here</b></button>
+
+            <div id="skillDetails" class="skill-details" style="display: none;">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 bg-gray-700 text-white mt-10">
+                    <!-- Front-End Skills -->
+                    <div class="skill-set">
+                        <h3 class="text-2xl font-semibold mb-4">Front-End</h3>
+                        <div class="flex flex-wrap justify-center">
+                            <div class="skill-item mx-4 mb-6">
+                                <div class="skill-icon bg-white p-4 rounded-full shadow-lg">
+                                    <img class="img"
+                                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/120px-HTML5_logo_and_wordmark.svg.png"
+                                        alt="HTML" />
+                                </div>
+                                <p class="mt-2">HTML</p>
+                            </div>
+                            <div class="skill-item mx-4 mb-6">
+                                <div class="skill-icon bg-white p-4 rounded-full shadow-lg">
+                                    <img src="data:image/png;base64,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"
+                                        alt="CSS" class="img" />
+                                </div>
+                                <p class="mt-2">CSS</p>
+                            </div>
+                            <div class="skill-item mx-4 mb-6">
+                                <div class="skill-icon bg-white p-4 rounded-full shadow-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6a/JavaScript-logo.png"
+                                        alt="JavaScript" class="img" />
+                                </div>
+                                <p class="mt-2">JavaScript</p>
+                            </div>
+                            <div class="skill-item mx-4 mb-6">
+                                <div class="skill-icon bg-white p-4 rounded-full shadow-lg">
+                                    <img src="https://getbootstrap.com/docs/5.0/assets/brand/bootstrap-logo.svg"
+                                        alt="Bootstrap" class="img" />
+                                </div>
+                                <p class="mt-2">Bootstrap</p>
+                            </div>
+                            <div class="skill-item mx-4 mb-6">
+                                <div class="skill-icon bg-white p-4 rounded-full shadow-lg">
+                                    <img src="data:image/png;base64,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"
+                                        alt="Tailwind CSS" class="img" />
+                                </div>
+                                <p class="mt-2">Tailwind CSS</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Framework Skills -->
+                    <div class="skill-set">
+                        <h3 class="text-2xl font-semibold mb-4">Framework/Library</h3>
+                        <div class="flex flex-wrap justify-center">
+                            <div class="skill-item mx-4 mb-6">
+                                <div class="skill-icon bg-gray-500 p-4 rounded-full shadow-lg">
+                                    <img src="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+                                        alt="React JS" class="w-12 h-12" />
+                                </div>
+                                <p class="mt-2">React.js</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <button id="projectBtn" class="mt-10 px-2" data-aos="fade-down-right" data-aos-duration="2000"><span
+                    class="about font-bold">Project : </span><b>✔Click
+                    Here</b></button>
+
+            <div id="projectDetails" class="project-details" style="display: none;">
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-10">
+                    <!-- Project 1 -->
+                    <div class="project-card p-6 border border-gray-200 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-indigo-600">Portfolio Website</h3>
+                        <p class="text-gray-700 mt-2 text-justify">A personal portfolio website built to showcase my skills,
+                            projects,
+                            and achievements. It uses <b>HTML, Tailwind CSS, and JavaScript</b> to create a responsive layout.
+                        </p>
+                    </div>
+                    <!-- Project 2 -->
+                    <div class="project-card p-6 border border-gray-200 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-indigo-600">Weather App</h3>
+                        <p class="text-gray-700 mt-2 text-justify">A <b>React-based weather application</b> that fetches data from an
+                           <b>External API to display real-time weather</b> information for any city. It includes search functionality
+                            and
+                            error handling.</p>
+                    </div>
+                    <!-- Project 3 -->
+                    <div class="project-card p-6 border border-gray-200 rounded-lg shadow-lg">
+                        <h3 class="text-xl font-semibold text-indigo-600">E-Commerce Website</h3>
+                        <p class="text-gray-700 mt-2 text-justify">The e-commerce website built in React provides a dynamic and
+                            user-friendly platform for<b> responsive website, increase and decrease the price and adding items to the cart</b>. It features smooth navigation and a responsive design for seamless shopping
+                            experience.</p>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 bg-white">
+        <div class="container mx-auto px-6 text-center">
+            <button id="contactBtn" class="mt-10 px-2" data-aos="fade-down-left" data-aos-duration="2000"><span
+                    class="about font-bold">Contact : </span><b>✔Click
+                    Here</b></button>
+
+            <div id="contactDetails" class="contact-details" style="display: none;">
+                <div class="mt-5 snap-center bg-blue-300">
+                    <h1 class="text-black p-2">
+                        <b>
+                            <span><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAIlJREFUSEvtlcENgDAMA6+bwCYwGWISVmET2ATIoxKoipJUKq/mk49lt25lJxpPasyPJjABCyDbMzuwPnjZn9EEDmDwML8wQj57Ba4geYYXB9ZukAW8b6Tiu0D2vltkftpuUbeodOC3sDPNt+LfCrtmAjWFcwKjt3CkKrdAq4UrM2qNivc2VrXgDfezJhlT5GNBAAAAAElFTkSuQmCC"
+                                    alt="mobile-icon" class="inline-block mr-1" />
+                                Mobile : +91
+                        </b> 9500363260
+                    </h1>
+                    <h1 class="text-black p-2">
+                        <b>
+                            <span><img
+                                    src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANlJREFUSEvtldsNwjAMRU83gU1gE5gEmASYhG4Cm0BvlUgmJHLTx09FPiPHx/fadRsWPs3C+VkXYAdcgc1E217AEWiVx1r06C4FmeMIsk0B75D5ApxGUm7AIbzti7cKIkB3tXZZW2yeIkBw9ULVeGpUtTyPb56eAlVz74LOIbCk5quZQbX6GE/RohigXkRIqiatOqfUBQiUU6P7fgQzVdvZGATIqRnanyqAVaPqrdelia4G1H4af4Dr2I9Fcy47DcI+3UX6YrUWpm7U4rp2NY8JWNcvc4wD7psPPK4yGUSJdKwAAAAASUVORK5CYII="
+                                    alt="email-icon" class="inline-block mr-1" />
+                                E-mail :
+                        </b> tamiltamil14182@gmail.com
+                    </h1>
+                </div>
+
+
+
+                <!-- Contact Form
+            <form class="mt-10 max-w-lg mx-auto">
+                <div class="mb-6">
+                    <input type="text" id="name" placeholder="Your Name"
+                        class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                        required>
+                </div>
+                <div class="mb-6">
+                    <input type="email" id="email" placeholder="Your Email"
+                        class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                        required>
+                </div>
+                <div class="mb-6">
+                    <textarea id="message" placeholder="Your Message"
+                        class="w-full p-4 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-600 focus:border-transparent"
+                        rows="4" required></textarea>
+                </div>
+                <button type="submit"
+                    class="bg-indigo-600 text-white w-full p-4 rounded-lg focus:outline-none hover:bg-indigo-700 transition">Send
+                    Message</button>
+            </form> -->
+            </div>
+
+            <!--Resume Section-->
+            <div class="mt-40" data-aos="zoom-in-up" data-aos-duration="2000">
+                <a href="https://drive.google.com/file/d/17unJLHUkzvvkJnQ2rvduaz9Gc6-UmUuN/view?usp=sharing"
+                    download="Tamil resume.pdf"
+                    class="underline underline-offset-4 text-black font-bold px-6 py-2 transition duration-300">
+                    @...Download Resume
+                </a>
+            </div>
+
+            <!--Project Section-->
+            <div class="mt-40" data-aos="zoom-in-up" data-aos-duration="2000">
+                <a href="https://my-e-commerce-website-is-magicpin.netlify.app/"
+                class="underline underline-offset-4 text-black font-bold px-6 py-2 transition duration-300">
+                #...My E-Commerce Project Website
+                </a>
+            </div>
+
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="bg-white text-white py-20 text-center">
+        <div class="container">
+            <div class="flex justify-center place-content-evenly">
+                <!-- Social Media Links -->
+                <a href="https://github.com/tamiltamil14182/REACT-WEB-PROJECT.git" target="_blank"
+                    class="text-white mx-4 hover:text-indigo-300 transition" data-aos="fade-up-right"
+                    data-aos-duration="2000"><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAWBJREFUSEu1lY1NxTAMhP02gUmATWASYBJgEmAS2AT6Vbno8temT6qlqmpi+3yX2L3EyXY5OX/MANxHBM9dev9GBM/38v2VnmGdWwA3EfGWkm4RBewhgTZ+I4CXiHg+IB8gH4s/cYX1AB5T5QfyZ9fXGqQGQJaf5I6+Twt1AMWGSjH8MBLixz7nxD4xrK1WA3ya5u/JWQmVvPftkuJ32wOopXGAPbm4DMTLOPSVhTOoAbLTXvYkmaSVdOuBO4BXUdCcAMDF5aV6CiwAqECHlx0mk+PWLdAZOMA1DDw+F+8ATvEagD9jmy+IA9Tde+QWDWMdgEaBhVvTmdU+Z+aNuHlNdRMIohsBpEM1PVnzZnNJHbe4IKNRoQmpEaCx4Ynq5mqq740K1qTnnjy9iQtLzi7b3riWPIziItAKUbIm+YiBAvyH02MjBs0EnWHgPupuP2D2R+vFRZv5Jx+YFq3r6QD/Wc9YGdHIjH4AAAAASUVORK5CYII=" /></a>
+                <a href="https://www.linkedin.com/in/tamil-tamil-271297292" target="_blank"
+                    class="text-white mx-4 hover:text-indigo-300 transition" data-aos="fade-down"
+                    data-aos-duration="2000"><img
+                        src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAANpJREFUSEvtldENwjAMBV83oZvAJjBJ2QQ2gU0ok4BOipFJGyLFSr+wFFVVYl/87CSDOtvQOb42B9wk7YNZzZJGi5Fn8AoGX8T9BbhLYjfHBugnbglwlXRKgVtkqwLY/SEBLg1ZVAFIA+QpaeohEQAGtksDoP3ztTXM551XzcDXwCQyJwtmQGDnLNMQYE0xsni4iTDAOotOI1vMd1sIgEQEw0rtHAJw8KhLDvDt/AfEJbKTjM4UlTa0bvEHa20dPtUaNNwOXy5FQMvFlm/GX5TbP5lRaRb+3R/9NwReTBmWBSIqAAAAAElFTkSuQmCC" /></a>
+                        <a href="mailto:tamiltamil14182@gmail.com" class="text-white mx-4 hover:text-indigo-300 transition"
+                        data-aos="fade-up-left" data-aos-duration="2000">
+                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAO9JREFUSEvdldENwjAMRK+bwCTAJjAJMAliEtgENoG+Kq5MpFRJmkqo/qnUOH6+q5N2Wji6hetrXYC9pJukzUzb3pJOkp7U8RY9+pdAWgSQbQz4hMoskFATqH+FjUPzXoEBKH7vFy+FBNTjgkUSYAnXAgjNnKOGkgAKWzJqDhOWYQmDYd/O700CWGAjcnn+TIXr0lvic8zqSQB1KI6SY4D47+ItYRxRaZENMAgAswwLdpEl8TAUAawrIHjtg66HwxRFFcDU2EkfT2pLQO6xqFbw/4CWl904uv4u4uAwjnNv1OR1netxUd66fplF0nOTv61sPBk08/C0AAAAAElFTkSuQmCC" />
+                    </a>
+            </div>                    
+            <div>
+                <p class="text-black text-lg mt-5" data-aos="flip-left" data-aos-duration="2000">&copy; 2025 Tamilselvan
+                    | Front-End Developer</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Custom Script (if needed) -->
+    <script src="script.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+</body>
+
+</html>

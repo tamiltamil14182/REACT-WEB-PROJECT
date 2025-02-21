@@ -1,0 +1,84 @@
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    
+    /* Style for the nav links */
+.nav-link {
+    position: relative; /* Set position for pseudo element */
+    text-decoration: none; /* Remove default underline */
+  }
+  
+  /* Hover effect */
+  .nav-link:hover {
+    color: violet; /* Change color on hover */
+  }
+
+  
+  .nav-link.active {
+    color: white; /* White text color when active */
+  }
+  
+  .nav-link.active::after {
+    content: ''; /* Create pseudo-element */
+    position: absolute;
+    bottom: -5px; /* Position the underline below the text */
+    left: 0;
+    width: 100%; /* Full width underline */
+    height: 2px; /* Thickness of the underline */
+    background-color: white; /* White color for the underline */
+  }
+
+  button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #2f8cf0;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  button:hover {
+    background-color: #2f8cf0;
+  }
+  .portfolio-details {
+    margin-top: 20px;
+  }
+  
+/* Background color for the Skills section */
+.skills-section {
+    background-color: #111827;
+  }
+  
+  /* Container for centering and padding */
+  /* .container {
+    max-width: 1200px;
+    margin: 0 auto;
+  } */
+  
+  /* Styling for the skill items */
+  .skill-item {
+    text-align: center;
+  }
+  
+  /* Styling for the skill icon circles */
+  .skill-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .img{
+    width: 50px;
+    height: 50px;
+  }
+  
+  /* Styling for the text under each icon */
+ p {
+    margin-top: 0.5rem;
+    font-size: 1.1rem;
+  }
+  
+
+  
